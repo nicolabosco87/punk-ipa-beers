@@ -1,0 +1,20 @@
+<div *ngIf="beerInfo" >
+
+    <h2 class="mb-4">{{ beerInfo.name }} </h2>
+
+    <p class="mb-6">{{ beerInfo.description }}</p>
+
+    <h6>Details:</h6>
+
+    <ul>
+        <li>ABV: {{ beerInfo.abv }}</li>
+        <li>IBU: {{ beerInfo.ibu }}</li>
+        <li>EBC: {{ beerInfo.ebc }}</li>
+    </ul>
+
+</div>
+
+
+<div class="text-right">
+    <a routerLink="/beers/" routerLinkActive="active" class="btn">Return to list</a>
+</div>

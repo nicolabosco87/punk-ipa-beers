@@ -1,5 +1,10 @@
-<h2>List</h2>
+<h2 class="mb-4">List</h2>
 
-<ul>
-    <li>List of beers</li>
+<ul class="beer-list" *ngIf="beerListRetrieved">
+    <li class="beer-list__item" *ngFor="let b of beerList">
+        <a routerLink="{{ '/beers/' + b.id }}" routerLinkActive="active" >
+            <h2>{{ b.name }}</h2>
+            <i>{{ b.tagline }}</i>
+        </a>
+    </li>
 </ul>
