@@ -3,9 +3,12 @@
 # compiled output
 /dist
 /tmp
+/nativescript/platforms/
+
 
 # dependencies
 /node_modules
+/nativescript/node_modules
 
 # IDEs and editors
 /.idea
@@ -30,6 +33,7 @@
 npm-debug.log
 testem.log
 /typings
+/nativescript/yarn.lock
 
 # e2e
 /e2e/*.js
