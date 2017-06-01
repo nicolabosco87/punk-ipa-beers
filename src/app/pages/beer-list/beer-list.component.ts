@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { PunkApiService } from '../../services/punkapi.service'
+//import { PunkApiService } from '../../../../nativescript/shared/services/punkapi.service'
+import { PunkApiService } from '../../../shared/services/punkapi.service'
 
 @Component({
     templateUrl: './beer-list.component.html',
@@ -16,7 +17,7 @@ export class BeerListComponent {
 
         this.punkApiService.list()
         .subscribe(
-            beers => {
+            (beers) => {
                 this.beerList = beers;
                 this.beerListRetrieved = true;
             }

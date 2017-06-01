@@ -1,7 +1,10 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { PunkApiService } from '../../services/punkapi.service'
 import { ActivatedRoute } from '@angular/router';
-import { Beer } from '../../models/beer';
+//import { PunkApiService } from '../../../../nativescript/shared/services/punkapi.service'
+//import { Beer } from '../../../../nativescript/shared/models/beer';
+
+import { PunkApiService } from '../../../shared/services/punkapi.service'
+import { Beer } from '../../../shared/models/beer'
 
 @Component({
     templateUrl: './beer-detail.component.html',
@@ -21,7 +24,7 @@ export class BeerDetailComponent implements OnInit, OnDestroy {
     loadDetails(id: number) {
         this.punkApiService.detail(id)
             .subscribe(
-                beers => {
+            (beers: Beer) => {
                 this.beerInfo = beers;
                 this.beerListRetrieved = true;
 
