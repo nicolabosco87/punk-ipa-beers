@@ -1,0 +1,16 @@
+<ActionBar title="Punk Ipa Beers"></ActionBar>
+
+<StackLayout *ngIf="beerInfo" >
+
+
+    <TextView class="mb-4" text="{{ beerInfo.name }}" ></TextView>
+
+    <TextView class="mb-6" text="{{ beerInfo.description }}" ></TextView>
+
+    <TextView text="- ABV: {{ beerInfo.abv }}"></TextView>
+    <TextView text="- IBU: {{ beerInfo.ibu }}"></TextView>
+    <TextView text="- EBC: {{ beerInfo.ebc }}"></TextView>
+
+    <Button [nsRouterLink]="['/beers/']" text="Return to list"></Button>
+</StackLayout>
+

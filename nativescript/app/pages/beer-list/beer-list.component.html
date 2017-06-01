@@ -1,0 +1,8 @@
+<ActionBar title="Punk Ipa Beers"></ActionBar>
+
+<WrapLayout>
+    <StackLayout class="beer-card" *ngFor="let item of beerList">
+        <Label [nsRouterLink]="['/beers/' + item.id]" [text]="item.name" ></Label>
+    </StackLayout>
+</WrapLayout>
+

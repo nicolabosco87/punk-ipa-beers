@@ -1,0 +1,17 @@
+.beer-list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding-left: 0;
+}
+
+
+.beer-list__item {
+    width: 25%;
+    padding-right: 5px;
+    margin-bottom: 20px;
+}
+
+.beer-list__item h2 {
+    font-weight: 300;
+}
